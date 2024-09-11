@@ -16,7 +16,7 @@ function calculateTax(income, expenses) {
 const incomeTK = 10000;
 const expensesTK = 3000;
 const result = calculateTax(incomeTK, expensesTK);
-console.log(result);
+// console.log(result);
 
 // ***************
 // ***************
@@ -44,8 +44,8 @@ function sendNotification(email) {
 const email_name = 'nurmahammad@gmail.com';
 const email_name2 = 'nmrobi@gmail.com';
 
-console.log(sendNotification(email_name));
-console.log(sendNotification(email_name2));
+// console.log(sendNotification(email_name));
+// console.log(sendNotification(email_name2));
 
 // ***************
 // ***************
@@ -70,4 +70,38 @@ function checkDigitsInName(name) {
 }
 
 const check_name = checkDigitsInName('Robi123');
-console.log(check_name);
+// console.log(check_name);
+
+// ***************
+// ***************
+// ***************
+// ***************
+// ***************
+
+// Problem 04 : Calculate Admission Final Score
+
+function calculateFinalScore(obj) {
+  if (typeof obj !== 'object') {
+    return 'Invalid Input';
+  }
+
+  const testScore = obj.testScore;
+  const schoolGrade = obj.schoolGrade;
+  if (obj.isFFamily === true) {
+    isFFamily = 20;
+  } else {
+    isFFamily = 0;
+  }
+
+  const final_score = testScore + schoolGrade + isFFamily;
+
+  if (final_score >= 80) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const info = { name: 'Rajib', testScore: 45, schoolGrade: 25, isFFamily: true };
+const results = calculateFinalScore(info);
+console.log(results);
