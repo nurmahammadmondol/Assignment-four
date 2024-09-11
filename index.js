@@ -16,7 +16,7 @@ function calculateTax(income, expenses) {
 const incomeTK = 10000;
 const expensesTK = 3000;
 const result = calculateTax(incomeTK, expensesTK);
-// console.log(result);
+console.log(result);
 
 // ***************
 // ***************
@@ -44,8 +44,8 @@ function sendNotification(email) {
 const email_name = 'nurmahammad@gmail.com';
 const email_name2 = 'nmrobi@gmail.com';
 
-// console.log(sendNotification(email_name));
-// console.log(sendNotification(email_name2));
+console.log(sendNotification(email_name));
+console.log(sendNotification(email_name2));
 
 // ***************
 // ***************
@@ -70,7 +70,7 @@ function checkDigitsInName(name) {
 }
 
 const check_name = checkDigitsInName('Robi123');
-// console.log(check_name);
+console.log(check_name);
 
 // ***************
 // ***************
