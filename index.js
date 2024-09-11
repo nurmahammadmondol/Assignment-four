@@ -105,3 +105,42 @@ function calculateFinalScore(obj) {
 const info = { name: 'Rajib', testScore: 45, schoolGrade: 25, isFFamily: true };
 const results = calculateFinalScore(info);
 console.log(results);
+
+// ***************
+// ***************
+// ***************
+// ***************
+// ***************
+
+// Problem 05:  Predict Avarage Waiting Time
+
+function waitingTime(waitingTimes, serialNumber) {
+  if (
+    Array.isArray(waitingTimes) === false ||
+    typeof serialNumber !== 'number'
+  ) {
+    return 'Invalid Input';
+  }
+
+  let sum = 0;
+  for (let waitPeopleTime of waitingTimes) {
+    sum += waitPeopleTime;
+  }
+
+  const size = waitingTimes.length;
+  const Avarage = sum / size;
+  const round_avarage = Math.round(Avarage);
+
+  const serial = serialNumber - 1;
+  const isLater = serial - size;
+
+  const It_will_take_time = round_avarage * isLater;
+
+  return It_will_take_time;
+}
+
+const arrayTime = [7, 8, 3, 4, 5];
+const serialNumbers = 10;
+
+const time_result = waitingTime(arrayTime, serialNumbers);
+console.log(time_result);
