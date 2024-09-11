@@ -52,3 +52,22 @@ console.log(sendNotification(email_name2));
 // ***************
 // ***************
 // ***************
+
+// Problem-03: Checking Digits Inside a Name
+
+function checkDigitsInName(name) {
+  if (typeof name !== 'string') {
+    return 'Invalid Input';
+  }
+
+  for (let Check of name) {
+    if (Check >= '0' && Check <= '9') {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+const check_name = checkDigitsInName('Robi123');
+console.log(check_name);
