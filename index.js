@@ -13,7 +13,42 @@ function calculateTax(income, expenses) {
   return Tax;
 }
 
-// const incomeTK = 34000;
-// const expensesTK = 1753;
-const result = calculateTax(10000, 3000);
+const incomeTK = 10000;
+const expensesTK = 3000;
+const result = calculateTax(incomeTK, expensesTK);
 console.log(result);
+
+// ***************
+// ***************
+// ***************
+// ***************
+// ***************
+
+// Problem 02 : Notification Generator
+
+function sendNotification(email) {
+  if (email.includes('@') === false) {
+    return 'Invalid Email';
+  }
+
+  const splitUp = email.split('@');
+
+  const userName = splitUp[0];
+  const domainName = splitUp[1];
+
+  const notification = userName + ' sent you an email from ' + domainName;
+
+  return notification;
+}
+
+const email_name = 'nurmahammad@gmail.com';
+const email_name2 = 'nmrobi@gmail.com';
+
+console.log(sendNotification(email_name));
+console.log(sendNotification(email_name2));
+
+// ***************
+// ***************
+// ***************
+// ***************
+// ***************
